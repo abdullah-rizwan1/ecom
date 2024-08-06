@@ -1,0 +1,20 @@
+.supplier-dashboard-container {
+    background-color: #efefef;
+    width: 100vw;
+    height: 80vh;
+    color: black;
+}
+
+.supplier-dashboard-container {
+    text-align: center;
+}
+
+.store-list {
+    display: flex;
+}
+
+.store-container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
