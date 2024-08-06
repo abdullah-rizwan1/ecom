@@ -2,24 +2,23 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const dotenv = require('dotenv')
 
-dotenv.config() 
+dotenv.config()
 
 exports.encryptString = async (str) => {
     const salt = await bcrypt.genSalt(10)
-    const encryptedString = await bcrypt.hash(str,salt);
+    const encryptedString = await bcrypt.hash(str, salt)
     return encryptedString
 }
 
-exports.isValidUser = async(userTypePassword, dbPassword) => {
+exports.isValidUser = async (userTypePassword, dbPassword) => {
     let isValidPassword = await bcrypt.compare(userTypePassword, dbPassword)
     return isValidPassword
-}   
-
+}
 
 exports.generateAuthToken = async (data) => {
     const token = jwt.sign(
         {
-            id: data.id,
+            id: data.supplier_id,
             first_name: data.first_name,
             last_name: data.last_name,
             email: data.email,
