@@ -5,18 +5,18 @@ import {
     getStoresError,
     fetchStores,
 } from './storeSlice'
-
+import { setStatusIdle } from './productSlice'
 import useAuth from '../hooks/useAuth'
 import { useEffect } from 'react'
 import Store from './Store'
 
 const StoreList = () => {
     const dispatch = useDispatch()
-    const { auth } = useAuth()
+    const { auth, setAuth } = useAuth()
     const stores = useSelector(selectAllStores)
     const storesStatus = useSelector(getStoresStatus)
     const error = useSelector(getStoresError)
-
+    dispatch(setStatusIdle())
     useEffect(() => {
         if (storesStatus === 'idle') {
             dispatch(fetchStores(auth))

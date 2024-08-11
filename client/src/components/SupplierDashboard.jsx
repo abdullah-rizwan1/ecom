@@ -5,7 +5,9 @@ const SupplierDashboard = () => {
     return (
         <div className="supplier-dashboard-container">
             <h1>Supplier Dashboard</h1>
-            <StoreList />
+            <div className="product-container">
+                <StoreList />
+            </div>
         </div>
     )
 }

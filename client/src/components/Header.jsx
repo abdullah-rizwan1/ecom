@@ -11,14 +11,14 @@ const Header = () => {
         navigate('/')
     }
     return (
-        <header class="site-header">
-            <div class="site-identity">
+        <header className="site-header">
+            <div className="site-identity">
                 <h1>
                     <a href="#">Ecom</a>
                 </h1>
             </div>
-            <nav class="site-navigation">
-                <ul class="nav">
+            <nav className="site-navigation">
+                <ul className="nav">
                     <li>
                         <Link to="/supplier/stores">Supplier</Link>
                     </li>

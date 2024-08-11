@@ -13,6 +13,7 @@ const initialState = {
 export const fetchStores = createAsyncThunk(
     'store/fetchStores',
     async (auth) => {
+        console.log('auth in storeSlice: ', auth)
         const response = await axios.get(STORE_URL, {
             headers: { 'authorization-token': auth.authorizationToken },
         })

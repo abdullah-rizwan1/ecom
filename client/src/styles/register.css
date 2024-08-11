@@ -33,7 +33,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     padding: 1rem;
-    background-color: dodgerblue;
+    background-color: #ccc;
     border-radius: 20px;
 }
 

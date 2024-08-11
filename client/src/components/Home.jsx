@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
+import ProductsList from './ProductsList'
 
 const Home = () => {
     return (
         <section>
-            <h1>Home</h1>
+            <ProductsList />
         </section>
     )
 }

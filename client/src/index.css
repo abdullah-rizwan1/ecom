@@ -9,22 +9,28 @@
 body {
     font-family: Helvetica;
     margin: 0;
+    color: black;
+    background-color: #efefef;
 }
 
 .site-header a {
     text-decoration: none;
     font-size: 1em;
-    color: white;
-    border: 1px solid white;
+    color: balck;
+    border: 1px solid black;
     padding: 5px;
     border-radius: 5px;
 }
+
+.site-header a:visited {
+    color: black;
+}
 .site-header {
-    background-color: dodgerblue;
-    border-bottom: 1px solid #ccc;
-    padding: 0.5em 1em;
+    border-bottom: 1px solid black;
+    color: black;
     display: flex;
     justify-content: space-between;
+    background-color: white;
 }
 
 .site-identity a {
@@ -33,6 +39,9 @@ body {
 
 .site-navigation a:hover {
     background-color: whitesmoke;
+}
+
+.site-navigation a:visited {
     color: black;
 }
 
@@ -40,6 +49,7 @@ body {
     font-size: 2em;
     margin: 0.6em 0;
     display: inline-block;
+    color: black;
 }
 
 .site-navigation ul,
@@ -50,17 +60,17 @@ body {
 
 .site-navigation li {
     display: inline-block;
-    margin: 1.4em 1em 1em 1em;
+    margin: 1.8em 1em 0em 1em;
 }
 
 footer {
     position: fixed;
-    background-color: dodgerblue;
-    border-top: 1px solid #ccc;
+    background-color: white;
+    border-top: 1px solid black;
     padding: 10px;
     left: 0;
     bottom: 0;
     width: 100%;
-    color: white;
+    color: black;
     text-align: center;
 }

@@ -1,0 +1,53 @@
+/* //product deets ki jagah prod section
+// r detail container ki jagah pr prod list
+ */
+
+.products-section {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.no-spec {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 250px;
+    text-align: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-image {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 5px;
+}
+
+.no-spec:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.no-spec p {
+    margin-bottom: 10px;
+}
+
+.no-spec a {
+    text-decoration: none;
+    color: black;
+}
+
+.no-spec a:visited {
+    color: black;
+}

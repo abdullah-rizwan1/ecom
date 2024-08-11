@@ -3,10 +3,17 @@ import useAuth from '../hooks/useAuth'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import axios from '../api/axios'
 const LOGIN_URL = '/api/supplier/login'
+import { useDispatch } from 'react-redux'
 import '../styles/login.css'
+import {
+    fetchProducts,
+    fetchProductsForStore,
+    setStatusIdle,
+} from './productSlice'
 
 const Login = () => {
     const { setAuth } = useAuth()
+    const dispatch = useDispatch()
     const navigate = useNavigate()
     const location = useLocation()
     const from = location?.state?.from?.pathname || '/'
@@ -40,10 +47,10 @@ const Login = () => {
             const authorizationToken =
                 response?.headers?.['authorization-token']
             setAuth({ email, password: pwd, authorizationToken })
-
+            dispatch(setStatusIdle())
             setEmail('')
             setPwd('')
-            navigate(from, { replace: true })
+            navigate('/supplier/stores')
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response')

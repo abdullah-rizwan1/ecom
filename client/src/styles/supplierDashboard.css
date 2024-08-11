@@ -1,12 +1,13 @@
 .supplier-dashboard-container {
+    padding: 20px;
+    height: 100vh;
     background-color: #efefef;
-    width: 100vw;
-    height: 80vh;
-    color: black;
 }
 
-.supplier-dashboard-container {
+h1 {
     text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .store-list {
@@ -14,7 +15,31 @@
 }
 
 .store-container {
-    background-color: white;
-    border-radius: 20px;
-    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.store-wrapper {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 250px;
+    text-align: center;
+}
+.store-wrapper:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.banner-image img {
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    height: auto;
+}
+h4 {
+    margin: 10px 0;
+    color: #333;
 }

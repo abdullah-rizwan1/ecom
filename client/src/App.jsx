@@ -6,6 +6,8 @@ import RequireAuth from './components/RequireAuth'
 import SupplierDashboard from './components/SupplierDashboard'
 import Missing from './components/Missing'
 import Home from './components/Home'
+import ProductsList from './components/ProductsList'
+import ProductDetail from './components/ProductDetail'
 
 function App() {
     return (
@@ -14,11 +16,17 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="login" element={<Login />} />
                 <Route path="register" element={<Register />} />
+                <Route path="products" element={<Home />} />
+                <Route path="/:product_id" element={<ProductDetail />} />
 
                 <Route element={<RequireAuth />}>
                     <Route
                         path="supplier/stores"
                         element={<SupplierDashboard />}
+                    />
+                    <Route
+                        path="supplier/stores/:store_name"
+                        element={<ProductsList />}
                     />
                 </Route>
 
