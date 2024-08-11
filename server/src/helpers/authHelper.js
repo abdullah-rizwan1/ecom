@@ -10,6 +10,10 @@ exports.encryptString = async (str) => {
     return encryptedString
 }
 
+exports.customerVerificationOTP = () => {
+    return Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000
+}
+
 exports.isValidUser = async (userTypePassword, dbPassword) => {
     let isValidPassword = await bcrypt.compare(userTypePassword, dbPassword)
     return isValidPassword

@@ -18,5 +18,5 @@ module.exports = (app) => {
 
     app.use('/api/supplier', supplier)
     app.use('/api/supplier/store', store)
-    app.use('/api', product)
+    app.use('/api/home', product)
 }
